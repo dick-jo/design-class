@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.23/moment-timezone-with-data-2012-2022.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/maki-js@1.0.8/maki.css" rel="stylesheet" type="text/css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js" integrity="sha512-K9tDZvc8nQXR1DMuT97sct9f40dilGp97vx7EXjswJA+/mKqJZ8vcZLifZDP+9t08osMLuiIjd4jZ0SM011Q+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            transition: 300ms;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+        }
+        
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            padding: 0 12rem;
+            /*  */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        body>* {
+            max-width: 1280px;
+        }
+        
+        @media only screen and (max-width: 960px) {
+            body {
+                padding: 0 2rem;
+            }
+            main>.body {
+                flex-direction: column;
+            }
+        }
+        
+         :root {
+            --clr-gr-1: #1b1b1b;
+            --clr-gr-2: #424242;
+            --clr-gr-3: #dddddd;
+            --clr-accent: #ff00ff;
+            --ln: 1px solid var(--clr-gr-3);
+        }
+        
+        p,
+        a {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            color: var(--clr-gr-2);
+        }
+        
+        a {
+            font-style: none;
+            text-decoration: none;
+        }
+        
+        .divider {
+            height: 100%;
+            width: 1px;
+            margin: 0 1rem;
+            background-color: var(--clr-gr-3);
+        }
+        
+        main {
+            width: 100%;
+            padding: 0 3rem;
+            /*  */
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            /*  */
+            border: var(--ln);
+            border-radius: 1rem;
+        }
+        
+        main>* {
+            grid-column: span 12;
+            align-items: start;
+        }
+        
+        main>.brand {
+            height: 100%;
+            /*  */
+            padding: 3rem 0;
+            /*  */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /*  */
+            border-bottom: var(--ln);
+        }
+        
+        main>.body {
+            padding: 3rem 0;
+            /*  */
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        main>.rail-bottom {
+            height: 96px;
+            /*  */
+            padding: 1rem 0;
+            /*  */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /*  */
+            border-top: var(--ln);
+        }
+        
+        .btn-social {
+            height: 100%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: .24rem;
+            cursor: pointer;
+            user-select: none;
+            ;
+        }
+        
+        .btn-social:hover {
+            background-color: var(--clr-gr-1);
+            transform: scale(1.04);
+        }
+        
+        .btn-social:hover * {
+            color: white;
+            transform: scale(1.08);
+        }
+        
+        .btn-social:active {
+            transform: scale(.88);
+            transition: 60ms;
+        }
+        
+        .btn-social:active * {
+            transform: scale(.96);
+        }
+    </style>
+    <!--  -->
+</head>
+
+<body>
+    <main data-maki="scroll-in" data-tilt>
+        <div class="brand" data-maki="scroll-in">
+            <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192"><g transform="translate(-760.183 -340)"><rect width="192" height="192" transform="translate(760.183 340)" fill="rgba(255,255,255,0)"/><g transform="translate(809.608 377.474)"><g transform="translate(0 30.748)"><rect width="32" height="87" transform="translate(-0.426 -0.222)" fill="rgba(255,255,255,0)"/><path d="M15.374,86.356h0A15.416,15.416,0,0,0,0,71.1a7.7,7.7,0,0,0,7.687-7.687V23.061A7.7,7.7,0,0,0,0,15.374,15.392,15.392,0,0,0,15.373,0a15.274,15.274,0,0,0,4.509,10.866,15.269,15.269,0,0,0,10.866,4.508,7.7,7.7,0,0,0-7.687,7.687V63.417A7.7,7.7,0,0,0,30.748,71.1,15.417,15.417,0,0,0,15.374,86.356Z" transform="translate(0.366 0)" fill="#1b1b1b"/></g><g transform="translate(0 0)"><rect width="32" height="30" transform="translate(-0.426 0.526)" fill="rgba(255,255,255,0)"/><path d="M15.374,30.625h0A15.416,15.416,0,0,0,0,15.374,15.391,15.391,0,0,0,15.373,0a15.273,15.273,0,0,0,4.509,10.866,15.27,15.27,0,0,0,10.866,4.508A15.417,15.417,0,0,0,15.374,30.625Z" transform="translate(0.366 0)" fill="#1b1b1b"/></g><g transform="translate(31.114 30.748)"><rect width="30" height="87" transform="translate(0.46 -0.222)" fill="rgba(255,255,255,0)"/><path d="M15.374,86.356h0A15.416,15.416,0,0,0,0,71.1a7.7,7.7,0,0,0,7.687-7.687V23.061A7.7,7.7,0,0,0,0,15.374,15.392,15.392,0,0,0,15.373,0a15.274,15.274,0,0,0,4.509,10.866,15.269,15.269,0,0,0,10.866,4.508,7.7,7.7,0,0,0-7.687,7.687V63.417A7.7,7.7,0,0,0,30.748,71.1,15.417,15.417,0,0,0,15.374,86.356Z" transform="translate(0 0)" fill="#1b1b1b"/></g><g transform="translate(31.114 0)"><rect width="30" height="30" transform="translate(0.46 0.526)" fill="rgba(255,255,255,0)"/><path d="M15.374,30.625h0A15.416,15.416,0,0,0,0,15.374,15.391,15.391,0,0,0,15.373,0a15.273,15.273,0,0,0,4.509,10.866,15.27,15.27,0,0,0,10.866,4.508A15.417,15.417,0,0,0,15.374,30.625Z" transform="translate(0 0)" fill="#1b1b1b"/></g><g transform="translate(61.782 30.748)"><rect width="31" height="87" transform="translate(-0.208 -0.222)" fill="rgba(255,255,255,0)"/><path d="M15.374,86.356h0A15.416,15.416,0,0,0,0,71.1a7.7,7.7,0,0,0,7.687-7.687V23.061A7.7,7.7,0,0,0,0,15.374,15.392,15.392,0,0,0,15.373,0a15.274,15.274,0,0,0,4.509,10.866,15.269,15.269,0,0,0,10.866,4.508,7.7,7.7,0,0,0-7.687,7.687V63.417A7.7,7.7,0,0,0,30.748,71.1,15.417,15.417,0,0,0,15.374,86.356Z" transform="translate(0.079 0)" fill="#1b1b1b"/></g><g transform="translate(61.782 0)"><rect width="31" height="30" transform="translate(-0.208 0.526)" fill="rgba(255,255,255,0)"/><path d="M15.374,30.625h0A15.416,15.416,0,0,0,0,15.374,15.391,15.391,0,0,0,15.373,0a15.273,15.273,0,0,0,4.509,10.866,15.27,15.27,0,0,0,10.866,4.508A15.417,15.417,0,0,0,15.374,30.625Z" transform="translate(0.079 0)" fill="#1b1b1b"/></g></g></g></svg>
+        </div>
+        <div class="body" data-maki="scroll-in">
+            <p data-maki="scroll-in">digital design class -></p>
+            <p data-maki="scroll-in">SATURDAYS ............ @ <span id="tz">830PM GTM+9.5</span></p>
+        </div>
+        <div class="rail-bottom" data-maki="scroll-in">
+            <a href="https://discord.gg/397gNu3B" class="btn-social" data-maki="scroll-in">
+                <p>DISCORD</p>
+            </a>
+            <!-- <div class="divider" data-maki="scroll-in"></div> -->
+            <!-- <a href="https://discord.gg/397gNu3B" class="btn-social" data-maki="scroll-in">
+                <p>TWITCH</p>
+            </a> -->
+
+
+
+        </div>
+    </main>
+
+    <section id="sign-up"></section>
+
+    <!--  -->
+    <script>
+        const userTz = moment.tz.guess()
+        const adelaide = moment.tz("2022-05-03 20:30", "Australia/Adelaide")
+        let relativeTz = adelaide.clone().tz(userTz)
+            // 
+        document.querySelector("#tz").innerText = relativeTz.format("ha z")
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/maki-js@1.0.8/maki.js"></script>
+    <script>
+        maki()
+    </script>
+
+</body>
+
+</html>
